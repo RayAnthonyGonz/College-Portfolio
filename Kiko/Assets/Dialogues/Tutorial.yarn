@@ -1,0 +1,28 @@
+title: Tutorial
+tags: 
+colorID: 0
+position: 620,-172
+---
+<<if visited("Tutorial") is false>>
+    Guide: Hello and welcome to the Tutorial. Are you new here?
+    ->Yes
+        Guide: Oh lets start first with the basics. For movements use W, A, S, and D. Why don't you try it out.
+        <<set $newplayer to 1>>
+    ->No
+        Guide: Oh then I guess you can proceed
+        <<set $newplayer to 0>>
+<<elseif visited("Tutorial") is true and $newplayer is 1>>
+    Guide: You like the movements?
+    ->Yes
+        Guide: I am pretty sure you figure it out that you press spacebar to interact.
+        <<set $newplayer to 2>>
+    ->No
+        Guide: Sad... any how to interact press the spacebar.
+        <<set $newplayer to 2>>
+<<elseif visited("Tutorial") is true and $newplayer is 2>>
+    Guide: You are almost done, just press E to check your journal then you are pretty much done.
+	<<set $newplayer to 3>>
+<<else>>
+    Guide: Off you go then
+<<endif>>
+===

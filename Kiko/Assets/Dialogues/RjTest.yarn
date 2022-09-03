@@ -1,0 +1,17 @@
+title: Start
+tags: 
+colorID: 0
+position: 670,-122
+---
+<<if visited("Start") is false>>
+    RJ: Halu, how are you?
+    ->I'm undah da wotah
+        RJ: Please help me, im drowning
+        <<set $talked to true>>
+    ->What?
+        RJ: Help ples.
+        <<set $talked to false>>
+<<else>>
+    RJ: We've talked already.
+<<endif>>
+===

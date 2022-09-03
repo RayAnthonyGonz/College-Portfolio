@@ -1,0 +1,165 @@
+title: HomeMorning
+tags: 
+position: -77,-522
+---
+<<if $talkedInengStart is false>>
+    <<phoneDial>>
+    Phone: *Ringing*
+    Kiko: Hmm? It's the boss.
+    Kiko: Yes boss?
+    Boss: I'm only reminding you this time since you're new. 
+    Boss: If you don't come to work the next time, don't bother coming back at all.
+    Kiko: Understood boss.
+    Boss: Good, don't be late today.
+    Kiko: Ineng, I'm leaving first alright? Don't forget to lock the door when you leave.
+    Ineng: Okay, <i>kuya</i>.
+    Ineng: .......
+    Kiko: (I'm worried for Ineng, I'll ask the elderly couple next door to keep watch on her, just in case.)
+    <<set $talkedInengStart to true>>
+    <<enableMap>>
+    <<talkQuestStart>>
+    <<startMoving>>
+<<else>>
+    Ineng: You'll be late <i>kuya</i>.
+    <<enableMap>>
+    <<startMoving>>
+<<endif>>
+===
+title: ElderlyTalk
+tags: 
+position: -75.40604996681213,-266.9546203613281
+---
+<<if $ElderlyTalk is false>>
+    Kiko: Good morning <i>la, lo</i>. I have a favor to ask if you don't mind.
+    Lola: What is it, <i>iho</i>?
+    Kiko: Ineng seems distressed about the recent flood, can you look after her in the meantime? I still have to go to work throughout the day.
+    Lolo: Sure <i>iho</i>, not a problem. Be safe on your way to work alright?
+    Kiko: Thank you very much! Then I'll be off.
+    Lola: Take care iho!
+    <<set $ElderlyTalk to true>>
+    <<enableMap>>
+    <<startMoving>>
+    <<talkedElderly>>
+<<else>>
+    Lola: We'll just prepare some things and then we'll head right over okay?
+    <<enableMap>>
+    <<startMoving>>
+<<endif>>
+===
+title: BOReliefGoods
+tags: 
+colorID: 0
+position: 251,-519
+---
+<<if $BOReliefGoods is false>>
+    Barangay Official: Hey Kiko! I'm distributing the relief goods right now. 
+    Barangay Official: Just wait for a bit as I'm trying to cater the ones who are affected as much as possible.
+    Barangay Official: Okay, let me check if your name is on the list.
+    Kiko: Alright.
+    Barangay Official: ....
+    Barangay Official: Kiko, looks like your name is not on the distribution list today. I'm sorry.
+    Kiko: grunts, yeah it's fine.
+    Barangay Official: Don't worry, I'll give it to you in the following days.
+    Kiko: Hopefully, yeah.
+    Barangay Official: I'm sorry again, I'll get going now.
+    Kiko: Alright.
+    <<set $BOReliefGoods to true>>
+    <<enableMap>>
+    <<talkedBO>>
+    <<disableQuestIcon>>
+    <<startMoving>>
+<<else>>
+    Barangay Official: I'm quite busy here.
+    <<enableMap>>
+    <<startMoving>>
+<<endif>>
+===
+title: HomeDinner
+tags: 
+colorID: 0
+position: 251,-283
+---
+<<disableMap>>
+<<dinnerInengTalk>>
+Ineng: <i>Kuya</i>, I saw some of our neighbors got their supplies from the barangay official. Where's ours anyway?
+Kiko: Sadly, they ran out when it was our time. He says he'll give it in the following days.
+Kiko: Don't worry, we still have supplies. Should be enough for now.
+Ineng: Well, okay then.
+Kiko: Also, I talked with a new neighbor from across the street.
+Ineng: Who?
+Kiko: His name's Topher. I heard he's a rescue personnel, so that's that. He might be able to help us out when another flood comes.
+Ineng: I see, that's an advantage I guess. 
+Kiko: Anyways, how was school?
+Ineng: Its alright, our teacher told us she will be giving us a project in the following days. Might ask you to buy the materials for it, if you have the money.
+Kiko: Its no problem. I'm not a cheapskate when it comes to your education, remember that.
+Kiko: Now finish your food, and sleep early.
+Ineng: Fineee, you don't have to be so serious <i>kuya</i>.
+<<nextDay>>
+===
+title: TricycleDriver
+tags: 
+colorID: 0
+position: 563,-278
+---
+<<if $driverTalk is false>>
+    Tricycle Driver: Where to <i>bossing?</i> (Cost:<color=red> ₱ 20</color>) (Salary:<color=green> ₱ 200</color>)
+    <<set $driverTalk to true>>
+    <<goToWork>>
+    <<enableMap>>
+    <<startMoving>>
+<<else>>
+    Tricycle Driver: I'm not taking anymore passengers today <i>bossing</i>.
+    <<enableMap>>
+    <<startMoving>>
+<<endif>>
+===
+title: TopherIntro
+tags: 
+colorID: 0
+position: 562,-517
+---
+<<if $topherTalk is false>>
+    Topher: Hello there!
+    Kiko: Hey.
+    Topher: The name's Topher, just moved here this morning. What's Yours?
+    Kiko: Kiko.
+    Topher: Hey there Kiko. So I'm new here on these parts, do you mind telling me about the people and places here?
+    Kiko: Well, I live with my younger sister there. 
+    Kiko: The other neighbor is a lovely elderly couple who also looks after my sister when I work.
+    Kiko: Most stores are usually located across the street, by the highway. So just be careful.
+    Topher: Thanks for the heads up! As for myself, I'm currently working as a rescue personnel.
+    Topher: Recently, I was assigned to this barangay, that's why I moved here.
+    Topher: Any help you need that's in my field, I'll gladly obliged.
+    Kiko: That's good to know, anyway I got to go, might be late for work.
+    Topher: Oh sorry sorry. Thank you for your time!
+    Kiko: No problem.
+    <<set $topherTalk to true>>
+    <<enableMap>>
+    <<doneTalk>>
+    <<startMoving>>
+<<else>>
+    Topher: It was nice meeting you!
+    <<enableMap>>
+    <<startMoving>>
+<<endif>>
+===
+title: talkTrigger
+tags: 
+position: 252.12301635742188,-35.13896179199219
+---
+<<disableMap>>
+Topher: Hey, you there!
+Kiko: Looks like someone's calling me.
+<<enableMap>>
+<<startTopherQuest>>
+<<startMoving>>
+===
+title: distractedTrigger
+tags: 
+position: 564,-35.619110107421875
+---
+<<disableMap>>
+Kiko: It would be rude to ignore him.
+<<enableMap>>
+<<startMoving>>
+===

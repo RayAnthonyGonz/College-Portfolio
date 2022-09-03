@@ -1,0 +1,154 @@
+title: HomeMorning
+tags: 
+position: -74,-457
+colorID: 8
+---
+<<if $talkMorning is false>>
+    Kiko: Oh God, what am I gonna do?
+    Kiko: Look at this mess, gotta clean this up. 
+    Kiko: *Sigh* This is going to take the whole day. Have to contact <i>boss</i>.
+    <<phoneDial>>
+    Phone: *Dialing*
+    Kiko: Hey boss its Kiko. Can't go to work today, yesterday's flood hit our neighborhood and I need to sort things out here first.
+    Boss: Fine, but you better come in for work tomorrow, understood?
+    Kiko: Yes <i>po</i> sir. Thank you, sir.
+    Boss: *Grumbles and hangs up*
+    Kiko: Ineng, help me out here. Grab a mop, we're gonna clean the house.
+    Ineng: Alright <i>kuya</i>.
+    <<metalDoor>>
+    Voice outside: <i>Tao po!</i> Anyone there?
+    Kiko: Hmm? Who's that outside?
+    <<set $talkMorning to true>>
+    <<enableTutorial>>
+    <<enableMap>>
+    <<startMoving>>
+<<else>>
+    Ineng: Someone's calling you <i>kuya</i>.
+    <<enableMap>>
+    <<startMoving>>
+<<endif>>
+===
+title: BO_Dialogue
+tags: 
+position: 161,-457
+---
+<<if $talkedBO is false>>
+    Unknown: You're Mr. Kiko right?
+    Kiko: Who's asking?
+    Barangay Official: I'm from the barangay hall, here to assess damages in the area so we can give appropriate supplies.
+    Barangay Official: How severe is the flood damage to your home?
+    Kiko: We got hit pretty hard, most of our stuff got swept away by the flood. 
+    Kiko: The house has a couple of dents and holes that have propped up everywhere.
+    Barangay Official: Noted <i>po</i>. I'll give you and everyone the necessary supplies tomorrow.
+    Kiko: Thank you so much, I appreciate it. 
+    Barangay Official: Oh before I forget, the elderly couple down the street wants to talk to you.
+    Barangay Official: Just go south from here, you'll see them.
+    Kiko: Alright, I'll swing by.
+    Baranggay Official: Then I'll leave you to your day.
+    <<set $talkedBO to true>>
+    <<talkChecked>>
+    <<enableMap>>
+    <<startMoving>>
+<<else>>
+    Baranggay Official: I'll get going after I finish surveying the area.
+    <<enableMap>>
+    <<startMoving>>
+<<endif>>
+===
+title: Dinner
+tags: 
+position: 853,-458
+colorID: 8
+---
+<<disableMap>>
+<<talkIneng>>
+Ineng: What took you so long kuya?
+Kiko: <i>Lola</i> and <i>Lolo</i> asked me a favor. I was out buying supplies and medicines for them.
+Ineng: Did you pay for it?
+Kiko: They gave me the money to buy. No worries.
+Kiko: After I gave it to them, they gave me half of the supplies. They insisted.
+Ineng: That was nice of them.
+Kiko: I wonder where their relatives or children are though. It must be hard being the only ones living there.
+Ineng: I don't know, I don't think I ever played with their kids, if they even had any.
+Kiko: Good point.
+Ineng: By the way <i>Kuya</i>, my school supplies were swept away by the flood. We need to buy new ones.
+Kiko: Don't worry, I'll think of a way. We still need to repair the house.
+Ineng: ......
+Kiko: Something wrong?
+Ineng: Just, don't push yourself too hard okay?  Don't want you to get sick.
+Kiko: Of course not! I'm a big guy! Nothing's gonna stop me.
+Ineng: Yeah, yeah, finish your food <i>kuya</i>, its going to get cold.
+<<nextDay>>
+<<startMoving>>
+===
+title: OpeningCutscene
+tags: 
+position: -308,-459
+---
+Outside Voice: IT'S STARTING TO FLOOD! Prepare to evacuate for the flood!
+Kiko: What!?
+Kiko: Oh no...
+Kiko: Ineng wake up! Grab your things! Before they get swept away!
+<<startMoving>>
+===
+title: ElderlyQuest
+tags: 
+position: 401,-454
+---
+<<if $elderTalk1 is false>>
+    Lola: Kiko, can I ask a favor from you <i>iho</i>?
+    Kiko: Sure <i>Lola</i>, what is it?
+    Lola: Unfortunately, the flood swept away all our supplies. 
+    Lola: Can I trouble you to buy some at the <color=\#d44926>Central Store</color> for us?
+    Lola: I would have done it myself but these old bones just can't handle walking that far.
+    Lola: Don't worry, we'll give you the money to pay for it.
+    Lola: Oh I know! How about we share some of the supplies with you as compensation.
+    Kiko: You don't really have to <i>Lola</i>!
+    Lolo: We insist <i>iho</i>, in times like these we need all the help we can get, no?
+    Kiko: *Sigh* Alright, if you say so.
+    <<set $elderTalk1 to true>>
+    <<set $hasBought to false>>
+    <<set $elderTalk2 to false>>
+    <<talkCoupleTrigger>>
+    <<enableMap>>
+    <<startMoving>>
+<<elseif $elderTalk1 is true && $hasBought is false>>
+    Lolo: We'll wait here <i>iho</i>.
+    <<enableMap>>
+    <<startMoving>>
+<<endif>>
+<<if $elderTalk1 is true && $elderTalk2 is false && $hasBought is true>>
+    Kiko: Here you go <i>Lola</i>!
+    Lola: Thank you <i>iho</i>! Here we thought you ran off with the money.
+    Kiko: No worries <i>Lola</i>.
+    Lola: As promised, Keep that portion of the supplies. Don't go wasting it now okay?
+    Kiko: Thank you!
+    Lolo: Alright now go home <i>iho</i>, your sister is probably waiting for you.
+    <<set $elderTalk2 to true>>
+    <<set $hasBought to true>>
+    <<talkedCoupleTrigger>>
+    <<enableMap>>
+    <<startMoving>>
+<<elseif $elderTalk2 is true && $elderTalk1 is true>>
+    Lolo: Thanks for the help <i>iho</i>!
+    <<enableMap>>
+    <<startMoving>>
+<<endif>>
+===
+title: OpeningCutscene
+tags: 
+position: -386,-450
+---
+Kiko: Well that took a while. Time to go back.
+<<enableMap>>
+<<startMoving>>
+===
+title: distractedBO
+tags: 
+position: 161,-213
+---
+<<disableMap>>
+Kiko: It would be rude to ignore him.
+<<enableMap>>
+<<startMoving>>
+===

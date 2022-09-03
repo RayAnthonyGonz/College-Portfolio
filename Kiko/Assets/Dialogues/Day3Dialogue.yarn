@@ -1,0 +1,151 @@
+title: HomeMorning
+tags: 
+position: -150,-680
+---
+<<disableMap>>
+<<if $talkedInengStart is false>>
+    Kiko: Ineng, I'm heading out first. Remembe-
+    Ineng: Yeah yeah I know, lock the door when I leave.
+    Kiko: Okay, I'll be going.
+    Ineng: Take care.
+    <<set $talkedInengStart to true>>
+    <<enableMap>>
+    <<startMoving>>
+<<else>>
+    Ineng: You'll be late <i>kuya</i>, I'll take care of things here.
+    <<enableMap>>
+    <<startMoving>>
+<<endif>>
+===
+title: communityBoard
+tags: 
+position: 250, 256
+---
+<<if $boardStart is false>>
+    Kiko: Alright, what do we have here..
+    Kiko: "Warning, low pressure area detected by PAG-ASA entering the Philippine Area of Responsibility. 
+    Kiko: Expect heavy rainfall and possibly floods within 3 days."
+    Kiko: What? Another flood? I haven't even finished fixing the house yet. 
+    Kiko: Ah well, I'll think about it later.
+    Kiko: This week is gonna suck isn't it?
+    <<set $boardStart to true>>
+    <<startMoving>>
+    <<enableMap>>
+    <<boardQuestComplete>>
+<<else>>
+    Kiko: Flood comes in a few days, got it.
+    <<enableMap>>
+    <<startMoving>>
+<<endif>>
+===
+title: BODay3
+tags: 
+position: 102,-678
+---
+<<if $BOtalk is false>>
+    Barangay Official: Oh, its you Kiko! We still don't have the supplies though, sorry.
+    Kiko: *Sigh* I thought as much, its fine.
+    Barangay Official: Anyway, in case you weren't informed, there's going to be heavy rainfall coming in 3 Days. Another flood will possibly happen after that. 
+    Kiko: Yeah, just read it from the community board. What's the barangay plan for this?
+    Barangay Official: We're thinking of implementing the volunteer rescue training, and the usual evacuation protocols. We'll have to finalize it first.
+    Kiko: (Looks like I'll have to repair the house AND board it up for the flood, not to mention daily supplies. I have to watch our expenses.)
+    Kiko: Alright, good luck with that. I'll be off.
+    Barangay Official: Okay. Don't forget, heavy rain in 3 days, try to prepare for it beforehand.
+    <<set $BOtalk to true>>
+    <<enableMap>>
+    <<startMoving>>
+<<else>>
+    Barangay Official: Don't forget, heavy rain in 3 days, try to prepare for it beforehand.
+    <<enableMap>>
+    <<startMoving>>
+<<endif>>
+===
+title: InengBuyQuest
+tags: 
+position: 106,-434
+---
+<<disableMap>>
+<<if $InengQuestTalk is false>>
+    Ineng: <i>Kuya</i>, remember the project that I talked to you last night? Can you buy the <color=blue>materials</color> now please?
+    Kiko: Sure, what do you need?
+    Ineng: I'll need a Manila Paper, a black marker, and some crayons. 
+    Ineng: I think the <color=\#d44926>General Store</color> is located across the road from here where you can buy those.
+    Kiko: Alright, I'll go buy them right now. Prepare the table so that we can start cooking dinner okay?
+    Ineng: Okay!
+    <<set $InengQuestTalk to true>>
+    <<InengQuest>>
+    <<enableMap>>
+    <<startMoving>>
+<<else>>
+    Ineng: Don't worry! I'll prepare the table while you buy those.
+    <<enableMap>>
+    <<startMoving>>
+<<endif>>
+===
+title: HomeDinner
+tags: 
+position: 359,-431
+---
+<<disableMap>>
+<<triggerAtHome>>
+Kiko: Hey, I bought the materials, is it enough?
+Ineng: Looks enough, thank you <i>kuya</i>!
+Kiko: No problem, as long as you do well in school okay?
+Ineng: Of course!
+Kiko: Good. By the way, you saw the announcement on the community board?
+Ineng: Yeah, Is there really gonna be another flood? 
+Kiko: Yep, we need to repair the house and board it up after. I'll try buying materials needed tomorrow onwards.
+Kiko: Meanwhile, when it rains, you go straight home okay? Don't forget your umbrella.
+Ineng: Alright, don't forget yours too.
+Kiko: Okay, I'll clean the dishes, you go to sleep first.
+Ineng: Okay!
+<<enableMap>>
+<<nextDay>>
+<<startMoving>>
+===
+title: TricycleDriver
+tags: 
+position: 360.5047302246094,-188.50473022460938
+---
+<<disableMap>>
+<<if $driverTalk is false>>
+    Tricycle Driver: Where to <i>bossing?</i> (Cost:<color=red> ₱ 20</color>) (Salary:<color=green> ₱ 200</color>)
+    <<set $driverTalk to true>>
+    <<goToWork>>
+    <<enableMap>>
+    <<startMoving>>
+<<else>>
+    Tricycle Driver: I'm not taking anymore passengers tonight <i>bossing</i>.
+    <<enableMap>>
+    <<startMoving>>
+<<endif>>
+===
+title: BeforeBoard
+tags: 
+colorID: 0
+position: -163,-432
+---
+<<disableMap>>
+Kiko: Huh, never saw that <color=\#d44926>board</color> before.
+<<startMoving>>
+<<enableMap>>
+<<triggerBoardQuest>>
+===
+title: distracted
+tags: 
+position: 104.47579956054688,-188.51779174804688
+---
+<<disableMap>>
+Kiko: I should go straight to work.
+<<enableMap>>
+<<startMoving>>
+===
+title: distractedBoard
+tags: 
+position: 21, 29
+---
+<<disableMap>>
+Kiko: I should check out that board.
+<<enableMap>>
+<<startMoving>>
+===

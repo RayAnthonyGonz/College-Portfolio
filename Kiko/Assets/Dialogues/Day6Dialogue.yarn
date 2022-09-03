@@ -1,0 +1,97 @@
+title: HomeMorning
+tags: 
+position: -1539,-1485
+---
+<<if $InengTalk is false>>
+    Kiko: Ineng, get up!
+    Ineng: What is it <i>kuya</i>?
+    Kiko: Its raining heavily and the water is rising. Pack your stuff, we might need to evacuate.
+    Ineng: Okay okay, I'll pack your stuff too.
+    Kiko: Thanks, grab the necessary supplies that we need too.
+    Kiko: So that we have something to drink and eat for the following days.
+    Ineng: Okay.
+    Kiko: Good thing we boarded the house, we would've been gone while we slept if it weren't.
+    Ineng: What about <i>Lola</i> and <i>Lolo</i> <i>kuya</i>?
+    Kiko: Alright, I'll go get them and bring them here.
+    Ineng: Okay <i>kuya</i>, stay safe.
+    <<set $InengTalk to true>>
+    <<rescueQuest>>
+    <<enableMap>>
+    <<startMoving>>
+<<else>>
+    Ineng: You need to hurry!
+    <<enableMap>>
+    <<startMoving>>
+<<endif>>
+===
+title: TalkToElderQuest
+tags: 
+position: -1291,-1484
+---
+<<if $TalkCouple is false>>
+    Kiko: <i>Lola, Lolo</i>, you need to come to our house. It's safer there! We fortified it.
+    <<poleFall>>
+    Suddenly an electricity post starts to give away.
+    Lola: These old bones will only be slowing you down <i>iho</i>. 
+    Lola: Not to mention it will be much of a hassle to you to take care of us until rescue shows up.
+    Kiko: It's alright <i>Lola</i>, we'll manage. I can carry you!
+    Lolo: That pole is going to fall down <i>iho</i>, don't worry about us now. You have done too much.
+    Kiko: But-
+    Lolo: We'll be alright <i>iho</i>, we have experienced far worse things in life. 
+    Lolo: You are young, you shouldn't be risking yourself for us.
+    Lola: Don't worry, we'll get to a safe place. We've managed to survive this far after all on our own.
+    Kiko: ineng and I will look after you once we've evacuated.
+    Lola: Of course, and <i>iho</i>.
+    Kiko: Yeah?
+    Lola and Lolo: Thank you, for everything.
+    Kiko: Y-yeah of course, happy to help you two.
+    <<set $TalkCouple to true>>
+    <<talkedCouple>>
+    <<enableMap>>
+    <<startMoving>>
+<<else>>
+    Lola: Go on <i>na iho</i>!
+    Lolo: We'll be fine.
+    <<enableMap>>
+    <<startMoving>>
+<<endif>>
+===
+title: House2
+tags: 
+position: -1042,-1482
+---
+<<disableMap>>
+Kiko: Ineng! Grab your stuff and stand on the bed!
+Ineng: But wh-
+Kiko: QUICKLY!
+<<moveSiblingsTrigger>>
+Ineng: Kuya? W-what was that?!?
+Kiko: The electrical pole came crashing down, if we stood in the water, we would have been electrocuted.
+Ineng: That's a relief. Wait, what about <i>Lola</i> and <i>Lolo</i>?
+Kiko: ....
+Ineng: Kuya?
+Kiko: They... said they would get to a safe place, didn't want to be a bother for us they said.
+Ineng: They're gonna be okay? Right?
+Kiko: ....
+Ineng: ....
+Kiko: Let's just focus on ourselves for now, we'll look for them later. The rain is picking up.
+Ineng: Oh, o-okay.
+After a while, boat sounds can be heard, Topher shouts out to them
+Topher: Kiko! Ineng! Are you there?
+Kiko: We're here!
+Topher: Oh thank god, we're coming to get you just stay put!
+Kiko: Wait, the electrical pole outside came down! You'll get electrocuted!
+Topher: We've cut off the power to this area don't worry!
+Kiko: Alright, Ineng get ready to move.
+Ineng: O-okay.
+<<toFinalScene>>
+===
+title: distracted
+tags: 
+position: 700,100
+---
+<<disableMap>>
+Kiko: No time to waste sightseeing!
+<<enableMap>>
+<<startMoving>>
+===

@@ -1,0 +1,70 @@
+title: TopherTalk
+tags: 
+position: -930,-886
+---
+<<if $topherTalk is false>>
+    Kiko: I owe you our lives Topher, thank you for saving us.
+    Topher: Not a problem, its my job.
+    Kiko: By the way, did.. <i>Lola</i> and <i>Lolo</i> make it?
+    Topher: Do you mean the ones from downstream?
+    Kiko: Yeah, are they okay?
+    Topher: ... 
+    Kiko: Oh...
+    Topher: I'm sorry, we cut the power too late. Other rescuers will head to them soon.
+    Kiko: I understand. Thanks Topher...
+    Topher: Fortunately, we were able to save the kids in your area.
+    Topher: Those kids climbed up high and signalled us before the water got too high for them.
+    Kiko: That's good to hear.
+    Topher: Anyways, you might want to talk to your sister. She isn't taking it well.
+    Kiko: Yeah, will do.
+    <<set $topherTalk to true>>
+    <<hasTalked>>
+    <<startMoving>>
+<<else>>
+    Topher: You should talk to your sister.
+    <<startMoving>>
+<<endif>>
+===
+title: InengTalk
+tags: 
+position: -660,-888
+---
+<<if $talkIneng is false>>
+    Ineng: <i>Kuya</i>, are they-
+    Kiko: Yeah, they're...
+    Kiko: in a better place now.
+    Ineng: But why? They were nice people.
+    Kiko: ...
+    Kiko: I know, I know.
+    Ineng: ....
+    Ineng: How about my friends? Are they okay?
+    Kiko: They're fine, don't worry. You should meet them soon after this.
+    Kiko: ...
+    Ineng: <i>Kuya</i>, are we going safe?
+    Kiko: Of course Ineng, this boat's made of sturdier stuff than our house.
+    Ineng: Our house...
+    Kiko: We'll fix it up again.
+    Ineng: Do I have to go to school tomorrow?
+    Kiko: We'll manage Ineng. We have to anyway. Even if it means we go back to square one.
+    Ineng: Yeah, I guess.
+    <<set $talkIneng to true>>
+    <<playBGMusic>>
+    <<startCredits>>
+<<endif>>
+===
+title: kikoStart
+tags: 
+position: 500, 600
+---
+Kiko: Wew, that was a close one.
+Kiko: If it wasn't for Topher, we could've..
+Kiko: <i>Hays</i>, Best to ask Topher about what happened to Lola and Lolo.
+<<startMoving>>
+===
+title: distractedTopher
+tags: 
+position: 600, 700
+---
+Kiko: I should talk to Topher first.
+<<startMoving>>
+===

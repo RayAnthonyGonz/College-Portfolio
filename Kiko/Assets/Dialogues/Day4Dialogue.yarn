@@ -1,0 +1,114 @@
+title: HomeMorning
+tags: 
+position: -553,-759
+---
+<<if $HomeMorning is false>>
+    Ineng: Kuya..
+    Kiko: What is it Ineng?
+    Kiko: Jusko!
+    Ineng: Our supplies..
+    Ineng: ...they're gone.
+    Kiko: What!?!?
+    Ineng: It's gone.
+    Kiko: Are you alright Ineng? Are you hurt?
+    Ineng: No.. not really.
+    Kiko: (Okay, okay. Calm down Kiko.)
+    Boss: Kiko, where the heck are you? You're late!
+    Kiko: I'm sorry boss something happened in our home, I-
+    Boss: I don't give a thing about that, get over here right now! Or do you want to get fired?
+    Kiko: No boss, I-, understand boss.
+    Kiko: Ineng, sorry but I need to go. We'll sort this out later okay? I'll talk to <i>Lola</i> and <i>Lolo</i> to take care of you and look after the house.
+    Ineng: ...
+    Ineng: It's alright kuya.
+    Kiko: You don't have to go to school today if you want, just rest for now.
+    Ineng: Okay kuya, take care.
+    <<talkingQuestTrigger>>
+    <<enableMap>>
+    <<set $HomeMorning to true>>
+    <<startMoving>>
+<<else>>
+    Ineng: .......
+    <<enableMap>>
+    <<startMoving>>
+<<endif>>
+===
+title: TalkToCouple
+tags: 
+position: -294,-762
+---
+<<if $TalkCouple is false && $TalkCouple2 is false && $driverTalk is false>>
+    Kiko: <i>Lola</i>, <i>Lolo</i>, I have to ask another favor, its an emergency.
+    Lola: What is it <i>iho</i>?
+    Kiko: we got robbed this morning, but I have to go to work right now since I'm already late, and the boss is having none of it.
+    Lola: <i>Jusmiyo</i>! That's horrible.
+    Lola: Alright, you want us to look after your sister and the house?
+    Kiko: Yes please, if it isn't much of a hassle.
+    Lola: Not a problem <i>iho</i>, we'll take care of it. That poor child.
+    Lola: We'll also report the incident at the barangay at your stead.
+    Kiko: Thank you very, very much. I owe you big time.
+    <<talkElder1Eval>>
+    <<set $TalkCouple to true>>
+    <<enableMap>>
+    <<startMoving>>
+<<elseif $TalkCouple is true && $TalkCouple2 is false && $driverTalk is false>>
+    Lolo: We'll take care of things here, don't worry.
+    Lolo: You're boss sounds like a bad guy.
+    <<enableMap>>
+    <<startMoving>>
+<<endif>>
+
+<<if $TalkCouple2 is false && $TalkCouple is true && $driverTalk is true>>
+    Kiko: Hey, how did it go?
+    Lola: We're worried for Ineng <i>iho</i>. She barely talked the whole day.
+    Lola: She lost an appetite even though we offered her lots of snacks. She's just zoning in and out too.
+    Lolo: We also reported the situation to the barangay, said they're going to work on it, but they're busy with the flood business.
+    Kiko: I see, thank you so much.
+    Lola: Alright <i>iho</i>, I hope things work well for you two. Don't be shy to ask for help okay?
+    <<set $TalkCouple2 to true>>
+    <<enableMap>>
+    <<talkElder2Eval>>
+    <<startMoving>>
+<<elseif $TalkCouple2 is true && $TalkCouple is true && $driverTalk is true>>
+    Lola:<i>hayop talaga ang ang magnanakaw na iyon</i>.
+    Lolo: Language honey.
+    <<enableMap>>
+    <<startMoving>>
+<<endif>>
+===
+title: HomeDinner
+tags: 
+position: -306,-521
+---
+<<disableMap>>
+<<talkedIneng>>
+Kiko: Hey Ineng, I'm back.
+Ineng: Oh, welcome back, kuya.
+Kiko: I bought your favorite food!
+Ineng: Okay.
+Kiko: .......
+Ineng: ......
+Kiko: Is the food good? Your'e barely touching it.
+Ineng: .....
+Kiko: Ineng?
+Ineng: W-what? Y-yeah, its fine.
+Kiko:  Alright, go to sleep after okay? I'll take care of the rest.
+Ineng: Okay.
+<<nextDay>>
+===
+title: TricycleDriver
+tags: 
+position: -50,-518
+---
+<<if $driverTalk is false>>
+    Tricycle Driver: Where to <i>bossing?</i> (Cost:<color=red> ₱ 20</color>) (Salary:<color=green> ₱ 200</color>)
+    <<set $driverTalk to true>>
+    <<goToWork>>
+    <<hasWorked>>
+    <<enableMap>>
+    <<startMoving>>
+<<else>>
+    Tricycle Driver: I'm not taking anymore passengers tonight <i>bossing</i>.
+    <<enableMap>>
+    <<startMoving>>
+<<endif>>
+===

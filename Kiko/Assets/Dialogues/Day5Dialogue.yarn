@@ -1,0 +1,211 @@
+title: HomeMorning
+tags: 
+colorID: 0
+position: -574,-924
+---
+<<if $morningTalk is false>>
+    Kiko: Ineng, I have to go to work today. But I'll go home ea-
+    Phone Ring. Text from boss.
+    Boss: Kiko, you're fired. I can't handle your excuses for being late or worse absent in my business. Best of luck.
+    Kiko: (What? But I-)
+    Kiko: Actually, never mind.
+    Ineng: You're not going out today kuya?
+    Kiko: Yeah, if I remember the flood might happen tomorrow. Might as well use today to prepare for it. There's lots of things needed to do.
+    Kiko: Don't worry, they'll understand.
+    Ineng: I see, can I help with anything?
+    Kiko: Just look over the house for today, that will do.
+    Ineng: Okay.
+    Kiko: I'll find a way to reinforce our home for the incoming flood.
+    <<set $morningTalk to true>>
+    <<buyFortSuppliesStart>>
+    <<enableMap>>
+    <<startMoving>>
+<<else>>
+    Ineng: Don't worry, I'm not going anywhere.
+    <<enableMap>>
+    <<startMoving>>
+<<endif>>
+===
+title: ElderlyCoupleQuest
+tags: 
+colorID: 0
+position: -307,-925
+---
+<<if $elderTalk1 is false>>
+    Lola: Iho!
+    Kiko: Ah lola, what can I do for you?
+    Lola: You see, our supplies have been dwindling for the past few days, and we don't have the funds to buy more.
+    Lolo: If its okay for you, can you share some of your supplies with us? We'll be eternally grateful to you and your sister.
+    Kiko: No worries Lola! Take it as a repayment for taking care of my sister before.
+    Lola: Thank you so much iho!
+    Kiko: Let me get it for you, I'll be right back.
+    <<elderQuestStart>>
+    <<set $elderTalk1 to true>>
+    <<set $suppliesGot to false>>
+    <<set $elderTalk2 to false>>
+    <<enableMap>>
+    <<startMoving>>
+<<elseif $elderTalk1 is true && $suppliesGot is false>>
+    Lola: We'll wait here for those supplies <i>iho</i>.
+    <<enableMap>>
+    <<startMoving>>
+<<endif>>
+<<if $elderTalk1 is true && $elderTalk2 is false && $suppliesGot is true>>
+    Kiko: Lola, I have the supplies. I also put a little extra there for you.
+    Lola: No no iho, you shouldn't be giving this much to us!
+    Kiko: Not a problem lola, you need it more than us. We can still manage with what we have left.
+    Lolo: Thank you iho!
+    Lolo: You see, we mostly rely on pensions, sadly its slowly running out. 
+    Lolo: Add to the fact that our own sons and daughters have seemingly cut-off ties from us a long time ago.
+    Kiko: That's just terrible.
+    Lolo: Bah! Just the way of life it seems, it is what it is. We just make do with what little lives we have left.
+    Kiko: That's too soon to say that lolo.
+    Lolo: Hahaha! Maybe, well I don't want to ruin your day. You have other things to do.
+    Kiko: Right. I'll get going then.
+    Lola: Stay safe iho.
+    <<set $elderTalk2 to true>>
+    <<set $suppliesGot to true>>
+    <<enableMap>>
+    <<finishedElderQuest>>
+    <<startMoving>>
+<<elseif $elderTalk2 is true && $elderTalk1 is true>>
+    Lola: Thanks again for the help <i>iho</i>!
+    <<enableMap>>
+    <<startMoving>>
+<<endif>>
+===
+title: BOSupplies
+tags: 
+colorID: 0
+position: -564,-597
+---
+Barangay Official: Hey Kiko!
+Kiko: Hey.
+Barangay Official: I got the supplies as promised. Sorry it took a while though.
+Kiko: Woah, almost forgot about this. Better late than never I guess. Thank you!
+Barangay Official: Of course, happy to help.
+Barangay Official: I'll get going then.
+Kiko: Alright, see you.
+<<enableMap>>
+<<giveSupplies>>
+<<startMoving>>
+===
+title: TopherQuest
+tags: 
+colorID: 0
+position: -285,-595
+---
+<<if $topherTalk1 is false>>
+    Topher: Kiko!
+    Kiko: Oh, it's you topher.
+    Topher: I would like to ask a favor from you, if it's alright.
+    Kiko: What is it?
+    Topher: Can you kindly buy some of the materials needed for our training program? We'll give you the funds to buy it. 
+    Topher: We're understaffed at the moment, so we're looking for someone to help.
+    Topher: I think you can buy those at the <color=\#d44926>Central Store</color>.
+    Kiko: Sure, no problem.
+    Topher: Thank you! I'll be waiting back at my house.
+    Topher: Oh, before I forget, the elderly couple down the street wants to talk to you.
+    Kiko: Alright, I'll go talk to them.
+    <<set $topherTalk1 to true>>
+    <<set $topherSupplies to false>>
+    <<set $topherTalk2 to false>>
+    <<enableMap>>
+    <<triggerTopherQuest>>
+    <<startMoving>>
+<<elseif $topherTalk1 is true && $topherSupplies is false>>
+    Topher: I'll be waiting right here!
+    <<enableMap>>
+    <<startMoving>>
+<<endif>>
+<<if $topherTalk1 is true && $topherTalk2 is false && $topherSupplies is true>>
+    Kiko: Hey, I bought the materials you needed.
+    Topher: Nice! Let me check if it's complete.
+    Topher: Looks like everything is in order, thank you! Here's your payment.
+    Kiko: Oh no no, I can't accept this amount of cash.
+    Topher: Nah, don't worry about it. We kind of understood your financial situation you're experiencing right now, 
+    Topher: so our guys decided to chip in.
+    Kiko: Are you sure?
+    Topher: Of course, we need to help each other nowadays, especially in this time and age.
+    Kiko: Thank you, thank you very much!
+    Topher: Not a problem, don't go wasting it now.
+    <<set $topherTalk2 to true>>
+    <<set $topherSupplies to true>>
+    <<enableMap>>
+    <<finishedTopherQuest>>
+    <<startMoving>>
+<<elseif $topherTalk2 is true && $topherTalk1 is true>>
+    Lolo: Don't go wasting that money now!
+    <<enableMap>>
+    <<startMoving>>
+<<endif>>
+===
+title: HomeDinner
+tags: 
+colorID: 0
+position: 269,-740
+---
+Ineng: Say kuya, I saw you taking half of our supplies earlier. What was that for?
+Kiko: Well, the elderly couple next door asked for it. It looked like they really needed it since no one is taking care of them besides themselves.
+Kiko: Us on the other hand, can still manage with what we have. Luckily, that barangay official came through with his word and brought us some supplies. Better late than never.
+Ineng: I see, well its good since lola and lolo took great care for me for the past few days.
+Kiko: Indeed, indeed.
+Ineng: I do worry about them though when the flood arrives, it seems they are the only ones living in their home.
+Kiko: Don't worry, I'll help them when the situation comes to that.
+Ineng: That's a relief to hear. 
+Kiko: So how was school?
+Ineng: It's fine. The teachers were kind enough to give me alternate activities to catch up in class.
+Kiko: Good, that's good.
+Kiko: Well, time to go to sleep Ineng, we have to prepare for tomorrow.
+Ineng: Okay kuya, good night.
+<<nextDay>>
+===
+title: topherTalk
+tags: 
+colorID: 0
+position: 290,690
+---
+<<disableMap>>
+Topher: Hey! Kiko!
+Kiko: Looks like Topher's calling me.
+<<enableMap>>
+<<startMoving>>
+===
+title: distractedTalkTopher
+tags: 
+colorID: 0
+position: 250,210
+---
+<<disableMap>>
+Kiko: It would be rude to ignore Topher.
+<<enableMap>>
+<<startMoving>>
+===
+title: fortifying
+tags: 
+colorID: 0
+position: 200,210
+---
+Kiko: Alright let's get this started.
+Kiko: So this one goes here..
+Kiko: And that one goes there...
+<<showfortification>>
+Kiko: Finished! Wew, that was a lot of work.
+<<finishedFortQuest>>
+<<enableMap>>
+<<startMoving>>
+===
+title: gettingSupplies
+tags: 
+colorID: 0
+position: 200,220
+---
+Kiko: Alright I need to ration our supplies.
+Kiko: This one's for us..
+Kiko: And that one for <i>Lola</i> and <i>Lolo</i>...
+<<hideSupplies>>
+Kiko: Done! Time to give these to them.
+<<enableMap>>
+<<gotSupplies>>
+<<startMoving>>
+===

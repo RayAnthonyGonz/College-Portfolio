@@ -1,0 +1,71 @@
+fileFormatVersion: 2
+guid: b0799206ef6c43e4dbc710d42feafe69
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 94073015eacc34c1d8fc6786e43d60ca, type: 3}
+  LastImportHadImplicitStringIDs: 0
+  LastImportHadAnyStrings: 0
+  isSuccessfullyParsed: 0
+  parseErrorMessage: "Error on line 42 at position 42:\nextraneous input 'P' expecting
+    {'#', TEXT_NEWLINE}\r\nDebug: Offending symbol type: TEXT_COMMANDHASHTAG_ERROR\r\nIneng:
+    I'll need a [color=#0000ff]Manila Paper[/color], a [color=#0000ff]black marker[/color],
+    and some [color=#0000ff]crayons[/color]. I think the General Store is located
+    across the road from here.\r\r\n                                         ^\n\nTokens:\n1:0
+    ID \"title\"\n1:5 HEADER_DELIMITER \": \"\n1:7 REST_OF_LINE \"HomeMorning\"\n2:0
+    HEADER_NEWLINE \"\n\"\n2:0 ID \"tags\"\n2:4 HEADER_DELIMITER \": \"\n3:0 HEADER_NEWLINE
+    \"\n\"\n3:0 ID \"colorID\"\n3:7 HEADER_DELIMITER \": \"\n3:9 REST_OF_LINE \"0\"\n4:0
+    HEADER_NEWLINE \"\n\"\n4:0 ID \"position\"\n4:8 HEADER_DELIMITER \": \"\n4:10
+    REST_OF_LINE \"-150,-680\"\n5:0 HEADER_NEWLINE \"\n\"\n5:0 '---' \"---\"\n6:0
+    TEXT \"K\"\n6:1 TEXT \"iko: Ineng, I'm heading out first. Remembe-\"\n7:0 TEXT_NEWLINE
+    \"\r\n\"\n7:0 TEXT \"I\"\n7:1 TEXT \"neng: Yeah yeah I know, lock the door when
+    I leave.\"\n8:0 TEXT_NEWLINE \"\r\n\"\n8:0 TEXT \"K\"\n8:1 TEXT \"iko: Okay,
+    I'll be going.\"\n9:0 TEXT_NEWLINE \"\r\n\"\n9:0 TEXT \"I\"\n9:1 TEXT \"neng:
+    Take care.\"\n10:0 TEXT_NEWLINE \"\n\"\n10:0 '===' \"===\"\n11:0 ID \"title\"\n11:5
+    HEADER_DELIMITER \": \"\n11:7 REST_OF_LINE \"Billboard\"\n12:0 HEADER_NEWLINE
+    \"\n\"\n12:0 ID \"tags\"\n12:4 HEADER_DELIMITER \": \"\n13:0 HEADER_NEWLINE \"\n\"\n13:0
+    ID \"colorID\"\n13:7 HEADER_DELIMITER \": \"\n13:9 REST_OF_LINE \"0\"\n14:0 HEADER_NEWLINE
+    \"\n\"\n14:0 ID \"position\"\n14:8 HEADER_DELIMITER \": \"\n14:10 REST_OF_LINE
+    \"-149,-444\"\n15:0 HEADER_NEWLINE \"\n\"\n15:0 '---' \"---\"\n16:0 TEXT \"K\"\n16:1
+    TEXT \"iko: Huh, never saw this before.\"\n17:0 TEXT_NEWLINE \"\r\n\"\n17:0 TEXT
+    \"K\"\n17:1 TEXT \"iko: \"Warning, low pressure area detected by PAG-ASA entering
+    the Philippine Area of Responsibility. Expect heavy rainfall and possibly floods
+    within 7 days.\"\"\n18:0 TEXT_NEWLINE \"\r\n\"\n18:0 TEXT \"K\"\n18:1 TEXT \"iko:
+    What? Another flood? I haven't even finished fixing the house yet. \"\n19:0 TEXT_NEWLINE
+    \"\r\n\"\n19:0 TEXT \"K\"\n19:1 TEXT \"iko: Ah well, I'll think about it later.\"\n20:0
+    TEXT_NEWLINE \"\n\"\n20:0 '===' \"===\"\n21:0 ID \"title\"\n21:5 HEADER_DELIMITER
+    \": \"\n21:7 REST_OF_LINE \"BODay3\"\n22:0 HEADER_NEWLINE \"\n\"\n22:0 ID \"tags\"\n22:4
+    HEADER_DELIMITER \": \"\n23:0 HEADER_NEWLINE \"\n\"\n23:0 ID \"colorID\"\n23:7
+    HEADER_DELIMITER \": \"\n23:9 REST_OF_LINE \"0\"\n24:0 HEADER_NEWLINE \"\n\"\n24:0
+    ID \"position\"\n24:8 HEADER_DELIMITER \": \"\n24:10 REST_OF_LINE \"102,-678\"\n25:0
+    HEADER_NEWLINE \"\n\"\n25:0 '---' \"---\"\n26:0 TEXT \"B\"\n26:1 TEXT \"arangay
+    Official: Oh, its you Kiko! We still don't have the supplies though, sorry.\"\n27:0
+    TEXT_NEWLINE \"\r\n\"\n27:0 TEXT \"K\"\n27:1 TEXT \"iko: I thought as much, its
+    fine.\"\n28:0 TEXT_NEWLINE \"\r\n\"\n28:0 TEXT \"B\"\n28:1 TEXT \"arangay Official:
+    Anyway, in case you weren't informed, there's going to be heavy rainfall coming
+    in 7 Days. Possibly the flood will happen after that. \"\n29:0 TEXT_NEWLINE \"\r\n\"\n29:0
+    TEXT \"K\"\n29:1 TEXT \"iko: Yeah, just read it from the community board. What's
+    your plan for this?\"\n30:0 TEXT_NEWLINE \"\r\n\"\n30:0 TEXT \"B\"\n30:1 TEXT
+    \"arangay Official: We're thinking of implementing the volunteer rescue training,
+    and the usual evacuation protocols. We'll have to finalize it first.\"\n31:0
+    TEXT_NEWLINE \"\r\n\"\n31:0 TEXT \"K\"\n31:1 TEXT \"iko: (Looks like I'll have
+    to repair the house AND board it up for the flood, not to mention daily supplies.
+    Gotta have to watch out for our expenses.)\"\n32:0 TEXT_NEWLINE \"\r\n\"\n32:0
+    TEXT \"K\"\n32:1 TEXT \"iko: Alright, good luck with that. I'll be off.\"\n33:0
+    TEXT_NEWLINE \"\r\n\"\n33:0 TEXT \"B\"\n33:1 TEXT \"arangay Official: Okay. Don't
+    forget, heavy rain in 7 days, try to prepare for it beforehand.\"\n34:0 TEXT_NEWLINE
+    \"\n\"\n34:0 '===' \"===\"\n35:0 ID \"title\"\n35:5 HEADER_DELIMITER \": \"\n35:7
+    REST_OF_LINE \"InengBuyQuest\"\n36:0 HEADER_NEWLINE \"\n\"\n36:0 ID \"tags\"\n36:4
+    HEADER_DELIMITER \": \"\n37:0 HEADER_NEWLINE \"\n\"\n37:0 ID \"colorID\"\n37:7
+    HEADER_DELIMITER \": \"\n37:9 REST_OF_LINE \"0\"\n38:0 HEADER_NEWLINE \"\n\"\n38:0
+    ID \"position\"\n38:8 HEADER_DELIMITER \": \"\n38:10 REST_OF_LINE \"106,-434\"\n39:0
+    HEADER_NEWLINE \"\n\"\n39:0 '---' \"---\"\n40:0 TEXT \"I\"\n40:1 TEXT \"neng:
+    [i]Kuya[/i], remember the project that I talked to you last night? Can you buy
+    the materials now please?\"\n41:0 TEXT_NEWLINE \"\r\n\"\n41:0 TEXT \"K\"\n41:1
+    TEXT \"iko: Sure, what do you need?\"\n42:0 TEXT_NEWLINE \"\r\n\"\n42:0 TEXT
+    \"I\"\n42:1 TEXT \"neng: I'll need a [color=\"\n42:26 '#' \"#\"\n42:27 HASHTAG_TEXT
+    \"0000ff]Manila\"\n42:41 TEXT_COMMANDHASHTAG_ERROR \"P\""
